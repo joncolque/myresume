@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Jon Wilson Colque Limachi resume
+          Welcome to Jon Wilson Colque Limachi resume!
         </h1>
       </main>
     </div>
