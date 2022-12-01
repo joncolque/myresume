@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className={styles.title} data-test={'title-name'}>
           Welcome to Jon Wilson Colque Limachi resume!
         </h1>
       </main>
