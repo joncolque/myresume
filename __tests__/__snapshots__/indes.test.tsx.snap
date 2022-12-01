@@ -8,12 +8,43 @@ exports[`renders homepage unchanged 1`] = `
     <main
       class="main"
     >
-      <h1
-        class="title"
+      <img
+        alt="Girl in a jacket"
+        class="img_profile"
+        height="600"
+        src="https://media-exp1.licdn.com/dms/image/C4E03AQE1aCQkKfWCHQ/profile-displayphoto-shrink_800_800/0/1579644737769?e=1675296000&v=beta&t=98Dy2W8yZQI8eczWMFxObGYMvAW1ujbiQYBTMT0A644"
+        width="500"
+      />
+      <div
+        class="info_profile"
       >
-        Welcome to Jon Wilson Colque Limachi resume!
-      </h1>
+        <h1
+          class="title"
+          data-test="title-name"
+        >
+          Jon Wilson Colque Limachi
+        </h1>
+        <h2
+          class="subtitle"
+          data-test="subtitle-profession"
+        >
+          Software Engineer
+        </h2>
+        <p
+          class="aboutme"
+          data-test="p-aboutme"
+        >
+          I am passionate about the transmission of human knowledge, especially when it is technology. I am methodical, I focus on delivering value, I like teamwork. Systems Engineer.
+        </p>
+      </div>
     </main>
+    <footer
+      class="footer"
+    >
+      <p>
+        This page is a proof of concept builded with nextjs to use: Plain html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 1 DEC 2022.
+      </p>
+    </footer>
   </div>
 </div>
 `;
