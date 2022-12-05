@@ -1,5 +1,4 @@
-
-import { Resume } from '../entities/resume';
+import { Resume } from "../entities/Resume";
 
 export interface IResumeRepository {
   get(): Promise<Resume>

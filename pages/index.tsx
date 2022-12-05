@@ -28,9 +28,9 @@ export default function Home() {
         </div>
       </main>}
       {resume && <section>
-        {resume.companies.map(c => <p>
+        {resume.companies.map(c => <p key={c.name}>
           <strong>{c.name}</strong>
-          {c.jobs.map(j => <div>
+          {c.jobs.map(j => <div key={j.name}>
             <div>{j.years} - {j.name}</div>
             <div>{j.desc}</div>
           </div>)}
