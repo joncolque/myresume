@@ -9,7 +9,7 @@ exports[`renders homepage unchanged 1`] = `
       class="footer"
     >
       <p>
-        This page is a proof of concept builded with Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 5 DEC 2022. Cooming soon: Social media links, headless cypress, among others.
+        This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 5 DEC 2022. Cooming soon: Social media links, headless cypress, among others.
       </p>
     </footer>
   </div>
