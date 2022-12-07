@@ -5,11 +5,43 @@ exports[`renders homepage unchanged 1`] = `
   <div
     class="container"
   >
+    <section
+      style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; margin-top: 100px; margin-bottom: 20px;"
+    >
+      <div
+        style="justify-content: center;"
+      >
+        <img
+          src="gmail.svg"
+          style="margin-right: 4px;"
+          width="20px"
+        />
+        <text>
+          joncolque@gmail.com
+        </text>
+      </div>
+      <div
+        style="display: flex; justify-content: center;"
+      >
+        <img
+          src="linkedin.svg"
+          style="margin-right: 4px;"
+          width="20px"
+        />
+        <a
+          href="https://www.linkedin.com/in/jon-wilson-colque-limachi-0439abb2"
+          rel="noreferrer"
+          target="_blank"
+        >
+          joncolque
+        </a>
+      </div>
+    </section>
     <footer
       class="footer"
     >
       <p>
-        This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 5 DEC 2022. Cooming soon: Social media links, headless cypress, among others.
+        This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 7 DEC 2022. Cooming soon: headless cypress,  git repository, among others.
       </p>
     </footer>
   </div>
