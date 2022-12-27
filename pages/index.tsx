@@ -1,6 +1,12 @@
 import Head from 'next/head'
+import { Experience } from '../app/drivers/components/Experience'
+import { ProfilePicture } from '../app/drivers/components/ProfilePicture'
+import { ProfileUser } from '../app/drivers/components/ProfileUser'
+import { SocialMedia } from '../app/drivers/components/SocialMedia'
 import useGetResume from '../app/drivers/useGetResume'
-import styles from '../styles/Home.module.css'
+import styles from './index.module.css'
+
+const footerText = 'This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 7 DEC 2022. Cooming soon: headless cypress,  git repository, among others.'
 
 export default function Home() {
   const { resume } = useGetResume()
@@ -11,43 +17,21 @@ export default function Home() {
         <title>Jon Wilson Colque Limachi</title>
         <meta name="description" content="Software Engineer" />
         <link rel="icon" href="/j.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet" />
       </Head>
 
-      {resume && <main className={styles.main}>
-        <img className={styles.img_profile} src="https://media-exp1.licdn.com/dms/image/C4E03AQE1aCQkKfWCHQ/profile-displayphoto-shrink_800_800/0/1579644737769?e=1675296000&v=beta&t=98Dy2W8yZQI8eczWMFxObGYMvAW1ujbiQYBTMT0A644" alt="software engineer" width="500" height="600" />
-        <div className={styles.info_profile}>
-          <h1 className={styles.title} data-test={'title-name'}>
-            {resume.name}
-          </h1>
-          <h2 className={styles.subtitle} data-test={'subtitle-profession'}>
-            {resume.profession}
-          </h2>
-          <p className={styles.aboutme} data-test={'p-aboutme'}>
-            {resume.aboutme}
-          </p>
-        </div>
+      {resume && <main>
+        <ProfilePicture />
+        <ProfileUser resume={resume} />
       </main>}
       {resume && <section>
-        {resume.companies.map(c => <p key={c.name}>
-          <strong>{c.name}</strong>
-          {c.jobs.map(j => <div key={j.name}>
-            <div>{j.years} - {j.name}</div>
-            <div>{j.desc}</div>
-          </div>)}
-        </p>)}
+        <Experience resume={resume} />
       </section>}
-      <section style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', marginTop: '100px', marginBottom:'20px'}}>
-        <div style={{ justifyContent: 'center' }}>
-          <img src="gmail.svg" width={'20px'} style={{ marginRight: '4px' }} />
-          <text>joncolque@gmail.com</text>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="linkedin.svg" width={'20px'} style={{ marginRight: '4px' }} />
-          <a target={'_blank'} href='https://www.linkedin.com/in/jon-wilson-colque-limachi-0439abb2' rel="noreferrer">joncolque</a>
-        </div>
-      </section>
+      <SocialMedia />
       <footer className={styles.footer}>
-        <p>This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 7 DEC 2022. Cooming soon: headless cypress,  git repository, among others.</p>
+        <p>{footerText}</p>
       </footer>
     </div>
   )

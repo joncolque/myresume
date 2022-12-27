@@ -1,0 +1,16 @@
+
+.title {
+  margin: 0;
+  font-size: 2.75rem;
+  color: var(--primary);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.aboutme {
+  margin: 0;
+  font-size: var(--sm);
+}
