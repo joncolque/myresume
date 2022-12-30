@@ -6,9 +6,9 @@ import { SocialMedia } from '../app/drivers/components/SocialMedia'
 import useGetResume from '../app/drivers/useGetResume'
 import styles from './index.module.css'
 
-const lastUptaded = 'Last updated: 27 DEC 2022.'
+const lastUptaded = 'Last updated: 30 DEC 2022.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
-const coomingSoon = 'Cooming soon: headless cypress, improve styles, explanation of Clean Architecture on React in github repo, among others.'
+const coomingSoon = 'Cooming soon: technologies used in companies selector, download pdf, among others.'
 
 export default function Home() {
   const { resume } = useGetResume()
