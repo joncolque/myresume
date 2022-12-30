@@ -5,7 +5,7 @@ interface Props {
   resume: Resume
 }
 
-export const ProfileUser = ({ resume }: Props) => <div>
+export const ProfileUser = ({ resume }: Props) => <>
   <h1 className={styles.title} data-test={'title-name'}>
     {resume.name}
   </h1>
@@ -13,6 +13,6 @@ export const ProfileUser = ({ resume }: Props) => <div>
     {resume.profession}
   </h2>
   <p className={styles.aboutme} data-test={'p-aboutme'}>
-    {resume.aboutme}
+    <em>{resume.aboutme}</em>
   </p>
-</div>
+</>

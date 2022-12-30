@@ -6,11 +6,9 @@ exports[`renders homepage unchanged 1`] = `
     class="container"
   >
     <section
-      style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center; margin-top: 100px; margin-bottom: 20px;"
+      class="container"
     >
-      <div
-        style="justify-content: center;"
-      >
+      <div>
         <img
           src="gmail.svg"
           style="margin-right: 4px;"
@@ -20,9 +18,7 @@ exports[`renders homepage unchanged 1`] = `
           joncolque@gmail.com
         </text>
       </div>
-      <div
-        style="display: flex; justify-content: center;"
-      >
+      <div>
         <img
           src="linkedin.svg"
           style="margin-right: 4px;"
@@ -36,12 +32,34 @@ exports[`renders homepage unchanged 1`] = `
           joncolque
         </a>
       </div>
+      <div>
+        <img
+          src="github.svg"
+          style="margin-right: 4px;"
+          width="20px"
+        />
+        <a
+          href="https://github.com/joncolque/myresume"
+          rel="noreferrer"
+          target="_blank"
+        >
+          joncolque
+        </a>
+      </div>
     </section>
     <footer
       class="footer"
     >
+      <text>
+        This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.
+      </text>
+      <text>
+        Cooming soon: headless cypress, improve styles, explanation of Clean Architecture on React in github repo, among others.
+      </text>
       <p>
-        This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts. Last updated: 7 DEC 2022. Cooming soon: headless cypress,  git repository, among others.
+        <em>
+          Last updated: 27 DEC 2022.
+        </em>
       </p>
     </footer>
   </div>
