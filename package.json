@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "cy:run":"npx cypress run",
+    "cy:run": "npx cypress run",
     "cy:open": "npx cypress open",
     "cypress:open": "npx start-server-and-test dev http://localhost:3000 cy:open",
     "integration": "npx start-server-and-test dev http://localhost:3000 cy:run"
@@ -16,7 +16,8 @@
   "dependencies": {
     "next": "13.0.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-tooltip": "^5.7.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",

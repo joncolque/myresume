@@ -8,43 +8,44 @@ exports[`renders homepage unchanged 1`] = `
     <section
       class="container"
     >
-      <div>
-        <img
-          src="gmail.svg"
-          style="margin-right: 4px;"
-          width="20px"
-        />
-        <text>
-          joncolque@gmail.com
-        </text>
-      </div>
-      <div>
+      <a
+        href="https://www.linkedin.com/in/jon-wilson-colque-limachi-0439abb2"
+        rel="noreferrer"
+        target="_blank"
+      >
         <img
           src="linkedin.svg"
-          style="margin-right: 4px;"
-          width="20px"
+          width="40px"
         />
-        <a
-          href="https://www.linkedin.com/in/jon-wilson-colque-limachi-0439abb2"
-          rel="noreferrer"
-          target="_blank"
-        >
-          joncolque
-        </a>
-      </div>
-      <div>
+      </a>
+      <a
+        href="https://github.com/joncolque/myresume"
+        rel="noreferrer"
+        target="_blank"
+      >
         <img
           src="github.svg"
-          style="margin-right: 4px;"
-          width="20px"
+          width="40px"
         />
-        <a
-          href="https://github.com/joncolque/myresume"
-          rel="noreferrer"
-          target="_blank"
-        >
-          joncolque
-        </a>
+      </a>
+      <p
+        data-tooltip-content="Click to copy: joncolque@gmail.com"
+        id="my-element"
+      >
+        <img
+          src="gmail.svg"
+          style="cursor: pointer;"
+          width="40px"
+        />
+      </p>
+      <div
+        class="react-tooltip styles-module_tooltip__mnnfp styles-module_dark__xNqje"
+        role="tooltip"
+      >
+        Click to copy: joncolque@gmail.com
+        <div
+          class="react-tooltip-arrow styles-module_arrow__K0L3T"
+        />
       </div>
     </section>
     <footer
@@ -54,11 +55,11 @@ exports[`renders homepage unchanged 1`] = `
         This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.
       </text>
       <text>
-        Cooming soon: headless cypress, improve styles, explanation of Clean Architecture on React in github repo, among others.
+        Cooming soon: technologies used in companies selector, download pdf, among others.
       </text>
       <p>
         <em>
-          Last updated: 27 DEC 2022.
+          Last updated: 5 JAN 2023.
         </em>
       </p>
     </footer>

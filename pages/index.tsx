@@ -5,8 +5,9 @@ import { ProfileUser } from '../app/drivers/components/ProfileUser'
 import { SocialMedia } from '../app/drivers/components/SocialMedia'
 import useGetResume from '../app/drivers/useGetResume'
 import styles from './index.module.css'
+import 'react-tooltip/dist/react-tooltip.css'
 
-const lastUptaded = 'Last updated: 30 DEC 2022.'
+const lastUptaded = 'Last updated: 5 JAN 2023.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
 const coomingSoon = 'Cooming soon: technologies used in companies selector, download pdf, among others.'
 
