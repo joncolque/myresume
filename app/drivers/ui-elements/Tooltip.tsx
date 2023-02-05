@@ -1,4 +1,4 @@
-import { ReactComponentElement, ReactElement } from 'react'
+import { ReactElement } from 'react'
 import { Tooltip as TooltipImpl } from 'react-tooltip'
 
 interface Props {
@@ -6,9 +6,9 @@ interface Props {
     children: ReactElement
 }
 
-export const Tooltip = ({children,text}: Props)=><>
-<p id="my-element" data-tooltip-content={text}>
-    {children}
-</p>
-<TooltipImpl anchorId='my-element' />
+export const Tooltip = ({ children, text }: Props) => <>
+    <p id="my-element" data-tooltip-content={text}>
+        {children}
+    </p>
+    <TooltipImpl anchorId='my-element' />
 </>
