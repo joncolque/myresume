@@ -14,6 +14,7 @@ exports[`renders homepage unchanged 1`] = `
         target="_blank"
       >
         <img
+          data-test="linkedin"
           src="linkedin.svg"
           width="40px"
         />
@@ -24,7 +25,19 @@ exports[`renders homepage unchanged 1`] = `
         target="_blank"
       >
         <img
+          data-test="github"
           src="github.svg"
+          width="40px"
+        />
+      </a>
+      <a
+        href="https://medium.com/@joncolque"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <img
+          data-test="medium"
+          src="medium.svg"
           width="40px"
         />
       </a>
@@ -33,6 +46,7 @@ exports[`renders homepage unchanged 1`] = `
         id="my-element"
       >
         <img
+          data-test="email"
           src="gmail.svg"
           style="cursor: pointer;"
           width="40px"
