@@ -10,6 +10,7 @@
 // what makes it such an awesome testing tool,
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
+import  { socialMedia, email } from '../../../src-data/socialMedia.ts'
 
 describe('home', () => {
   beforeEach(() => {
@@ -22,4 +23,18 @@ describe('home', () => {
     cy.get('[data-test=p-aboutme]').should('contain.text', 'I am passionate about the transmission of human knowledge, especially when it is technology. I am methodical, I focus on delivering value, I like teamwork. Systems Engineer.')
   })
 
+  it.only('display social media', () => {
+    socialMedia.forEach(sm => {
+      cy.get(`[data-test=${sm.name}]`)
+        .should('be.visible')
+        .and(($img) => {
+          expect($img[0].naturalWidth).to.be.greaterThan(0)
+        })
+    })
+    cy.get(`[data-test=email]`)
+        .should('be.visible')
+        .and(($img) => {
+          expect($img[0].naturalWidth).to.be.greaterThan(0)
+        })
+  })
 })
