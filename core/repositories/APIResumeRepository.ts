@@ -8,6 +8,15 @@ const resume: Resume = {
   aboutme: 'I am passionate about the transmission of human knowledge, especially when it is technology. I am methodical, I focus on delivering value, I like teamwork. Systems Engineer.',
   companies: [
     {
+      name: 'Veritran - Business solutions with Low-Code core',
+      jobs: [
+        {
+          name: 'Software Engineer',
+          years: '2023',
+        }
+      ]
+    },
+    {
       name: 'Fiera Studio - Venture Studio',
       jobs: [
         {
