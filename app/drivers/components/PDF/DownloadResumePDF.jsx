@@ -47,7 +47,7 @@ export default class DownloadResumePDF extends Component {
     const { loading } = this.state;
     if (!loading) {
       this.setState({ loading: true }, () => {
-        this.createAndDownloadPDF(this.generatePDF(), `file.pdf`, `file`, () =>
+        this.createAndDownloadPDF(this.generatePDF(), `JWCL_RESUME.pdf`, `file`, () =>
           this.setState({ loading: false })
         );
       });
