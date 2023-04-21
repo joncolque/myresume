@@ -7,9 +7,9 @@ import useGetResume from '../app/drivers/useGetResume'
 import styles from './index.module.css'
 import 'react-tooltip/dist/react-tooltip.css'
 
-const lastUptaded = 'Last updated: 23 MAR 2023.'
+const lastUptaded = 'Last updated: 21 APR 2023.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
-const coomingSoon = 'Cooming soon: technologies used in companies selector, download pdf, among others.'
+const coomingSoon = 'Cooming soon: technologies used in companies selector, server-side rendering, among others.'
 
 export default function Home() {
   const { resume } = useGetResume()
@@ -24,11 +24,10 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet" />
       </Head>
-
       {resume && <main className={styles.main}>
         <ProfilePicture />
         <ProfileUser resume={resume} />
-        <SocialMedia />
+        <SocialMedia resume={resume} />
       </main>}
       {resume && <section>
         <Experience resume={resume} />
