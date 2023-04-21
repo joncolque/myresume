@@ -39,12 +39,12 @@ export const MyResumePDF = ({ resume }: Props) => (
 
 Font.register({
   family: 'Montserrat',
-  src: `http://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf`,
+  src: `https://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYC3USBnSvpkopQaUR-2r7iU.ttf`,
 });
 
 Font.register({
   family: 'MontserratB',
-  src: `http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcvEr6Hm6RMS0v1dtXsGir4g.ttf`,
+  src: `https://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcvEr6Hm6RMS0v1dtXsGir4g.ttf`,
 });
 
 const styles = StyleSheet.create({
