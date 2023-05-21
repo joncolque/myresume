@@ -13,6 +13,6 @@ export const ProfileUser = ({ resume }: Props) => <>
     {resume.profession}
   </h2>
   <p className={styles.aboutme} data-test={'p-aboutme'}>
-    <p>{resume.aboutme}</p>
+    {resume.aboutme}
   </p>
 </>
