@@ -6,6 +6,7 @@ import { SocialMedia } from '../app/drivers/components/SocialMedia'
 import useGetResume from '../app/drivers/useGetResume'
 import styles from './index.module.css'
 import 'react-tooltip/dist/react-tooltip.css'
+import { srcProfilePicture } from '../src-data/socialMedia'
 
 const lastUptaded = 'Last updated: 21 APR 2023.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
@@ -25,7 +26,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet" />
       </Head>
       {resume && <main className={styles.main}>
-        <ProfilePicture />
+        <ProfilePicture src={srcProfilePicture}/>
         <ProfileUser resume={resume} />
         <SocialMedia resume={resume} />
       </main>}

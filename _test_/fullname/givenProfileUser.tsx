@@ -1,6 +1,4 @@
-import react from 'react'
 import { render } from '@testing-library/react'
-import Home from '../../pages';
 import { ProfileUser } from '../../app/drivers/components/ProfileUser';
 import { resume } from '../../src-data/resume';
 
