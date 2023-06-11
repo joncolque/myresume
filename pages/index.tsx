@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Experience } from '../app/drivers/components/Experience'
 import { ProfilePicture } from '../app/drivers/components/ProfilePicture'
 import { ProfileUser } from '../app/drivers/components/ProfileUser'
@@ -7,6 +6,7 @@ import useGetResume from '../app/drivers/useGetResume'
 import styles from './index.module.css'
 import 'react-tooltip/dist/react-tooltip.css'
 import { srcProfilePicture } from '../src-data/socialMedia'
+import { HeadPage } from '../app/drivers/components/headPage/HeadPage'
 
 const lastUptaded = 'Last updated: 21 APR 2023.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
@@ -17,16 +17,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Jon Wilson Colque Limachi</title>
-        <meta name="description" content="Software Engineer" />
-        <link rel="icon" href="/j.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet" />
-      </Head>
+      <HeadPage />
       {resume && <main className={styles.main}>
-        <ProfilePicture src={srcProfilePicture}/>
+        <ProfilePicture src={srcProfilePicture} />
         <ProfileUser resume={resume} />
         <SocialMedia resume={resume} />
       </main>}
