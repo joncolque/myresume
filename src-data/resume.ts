@@ -11,6 +11,9 @@ export const resume: Resume = {
                 {
                     name: 'Software Engineer',
                     years: '2023',
+                    technologies: ['react'],
+                    methodologies: ['clean architecture','clean code', 'tdd', 'pair programming'],
+                    languages: ['typescript','javascript', 'kotlin','java'],
                 }
             ]
         },
@@ -25,7 +28,9 @@ export const resume: Resume = {
                 {
                     name: 'Frontend Software Engineer',
                     years: '2020 - 2022',
-                    desc: 'React Native & React. Nextjs. CI. Typescript. Clean Architecture',
+                    technologies: ['react', 'react native', 'nextjs', 'nodejs', 'mongodb', 'firebase', 'android studio', 'xcode'],
+                    methodologies: ['clean architecture','ci'],
+                    languages: ['typescript','javascript']
                 }
             ]
         },
@@ -35,14 +40,15 @@ export const resume: Resume = {
                 {
                     name: 'Mobile Developer',
                     years: '2020',
-                    desc: 'Responsibilities: Development of the new Mobile department. Train new collaborators. Documentation. Technologies & Skills: React Native, Firebase services, environment settings, deployments PlayStore & AppleStore. Given workshops: React & React Native. Secondary skills: Kotlin for Android, Swift configurations for iOS, Go and NodeJS for microservices and proofs of concept for mobile features on backend side.',
+                    desc: 'Responsibilities: Development of the new Mobile department. Train new collaborators. Documentation. Given workshops: React & React Native. Proofs of concept for mobile features on backend side.',
+                    technologies: ['react native', 'android studio', 'xcode', 'node', 'go'],
+                    methodologies: ['scrum'],
+                    languages: ['javascript','kotlin','swift']
                 },
                 {
                     name: 'Fullstack developer',
                     years: '2017 - 2020',
                     desc: `Development of apps for internal use by the company and for clients. Research of new technologies and their potential for the company. Exhibition of capitalized technologies to the development areas and technical support.
-            Technologies & frameworks: Angular, React, Node, Express, Golang, Firebase, MongoDB, Docker, Electron.
-            Agile methodologies: Scrum, TDD.
             Given workshops: Angular, Go.
             Projects:
             - Microservices to connect devices regardless of protocol (IOT)
@@ -50,6 +56,9 @@ export const resume: Resume = {
             - CLI Framework javascript fullstack to generate applications end to end.
             - Desktop application for public tenders of "Compr.ar" systems from National Goverment.
             - Wiki repository to document the technological solutions for the company.`,
+                    technologies: ['angular', 'react', 'node', 'express', 'go', 'firebase','mongodb', 'docker','electron'],
+                    methodologies: ['scrum'],
+                    languages: ['javascript','go']
                 }
             ]
         },
@@ -59,6 +68,8 @@ export const resume: Resume = {
                 {
                     name: 'Android Developer Trainee',
                     years: '2016 - 2017',
+                    technologies: ['android studio'],
+                    languages: ['java']
                 },
             ]
         },
@@ -66,7 +77,8 @@ export const resume: Resume = {
             name: 'Banco Hipotecario - Bank Industry',
             jobs: [
                 {
-                    name: 'SQL Server Analyst Programmer',
+                    name: 'Analyst Programmer',
+                    technologies: ['SQL Server'],
                     years: '2015 - 2016',
                 },
             ]

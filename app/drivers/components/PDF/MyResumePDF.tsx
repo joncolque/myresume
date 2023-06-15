@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Font } from '@react-pdf/renderer';
 import { Resume } from '../../../../core/entities/Resume';
+import { Tags } from '../tags/Tags';
 
 interface Props {
   resume: Resume
@@ -27,6 +28,9 @@ export const MyResumePDF = ({ resume }: Props) => (
             {c.jobs.map(j => <div key={j.name}>
               <Text style={styles.description}>{j.years} - {j.name}</Text>
               <Text style={styles.description}>{j.desc}</Text>
+              {j.technologies && <TagsPDF items={j.technologies} />}
+              {j.methodologies && <TagsPDF items={j.methodologies} />}
+              {j.languages && <TagsPDF items={j.languages} />}
             </div>)}
           </View >)}
         </div>
@@ -36,6 +40,10 @@ export const MyResumePDF = ({ resume }: Props) => (
   </Document>
 );
 
+const TagsPDF = ({ items }: { items: string[] }) =>
+  <Text style={styles.description}>
+    {items?.map((item, idx) => `${item}${((idx + 1) === items?.length) ? '.' : ', '}`)}
+  </Text>
 
 Font.register({
   family: 'Montserrat',
@@ -73,7 +81,7 @@ const styles = StyleSheet.create({
     padding: 10,
     flexGrow: 1,
   },
-  companieContainer:{
+  companieContainer: {
     marginBottom: '10px'
   },
   titleCompanie: {

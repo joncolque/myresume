@@ -14,4 +14,7 @@ interface Job {
     years: string,
     name: string,
     desc?: string,
+    technologies?: string[],
+    methodologies?: string[],
+    languages?: string[],
 }
