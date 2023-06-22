@@ -1,18 +1,18 @@
 import { Resume } from "../../../core/entities/Resume";
-import styles from './profileUser.module.css'
+import { AboutMe, Subtitle, Title } from "./ProfileUser.style";
 
 interface Props {
   resume: Resume
 }
 
 export const ProfileUser = ({ resume }: Props) => <>
-  <h1 className={styles.title} data-test={'title-name'}>
+  <Title data-test={'title-name'}>
     {resume.name}
-  </h1>
-  <h2 className={styles.subtitle} data-test={'subtitle-profession'}>
+  </Title>
+  <Subtitle data-test={'subtitle-profession'}>
     {resume.profession}
-  </h2>
-  <p className={styles.aboutme} data-test={'p-aboutme'}>
+  </Subtitle>
+  <AboutMe data-test={'p-aboutme'}>
     {resume.aboutme}
-  </p>
+  </AboutMe>
 </>
