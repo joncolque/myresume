@@ -1,4 +1,4 @@
-import { View } from "@react-pdf/renderer"
+import styled from "styled-components"
 
 interface Props {
     items: string[]
@@ -6,23 +6,26 @@ interface Props {
 }
 
 export const Tags = ({ items }: Props) =>
-    <div
-        style={{
-            display: 'flex',
-            gap: '4px'
-        }}
-    >
+    <TagsContainer>
         {items.map(it => <Tag key={it} item={it} />)}
-    </div>
+    </TagsContainer>
 
-const Tag = ({ item, pdf = false }: { item: string, pdf?: boolean }) => <div
-    style={{
-        background: 'skyblue',
-        display: 'inline-block',
-        borderRadius: '8px',
-        padding: '4px',
-        fontSize: '10px'
-    }}
->
-    {item}
-</div >
+
+const Tag = ({ item }: { item: string }) =>
+    <TagContainer>
+        {item}
+    </TagContainer >
+
+const TagsContainer = styled.div`
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+`
+
+const TagContainer = styled.div`
+    background-color: skyblue;
+    display:inline-block;
+    border-radius: 8px;
+    padding: 4px;
+    font-size: 10px;
+`
