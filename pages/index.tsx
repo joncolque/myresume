@@ -8,7 +8,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { srcProfilePicture } from '../src-data/socialMedia'
 import { HeadPage } from '../app/drivers/components/headPage/HeadPage'
 
-const lastUptaded = 'Last updated: 14 JUN 2023.'
+const lastUptaded = 'Last updated: 13 SEP 2023.'
 const footerText = `This page is a proof of concept builded with React on Nextjs to use: Clean architecture. Semantic html and css. Custom domain. AWS Amplify. AWS Route 53. And will be modified to test several concepts.`
 const coomingSoon = 'Cooming soon: selector technologies.'
 
