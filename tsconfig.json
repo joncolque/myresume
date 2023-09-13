@@ -32,6 +32,7 @@
   ],
   "exclude": [
     "node_modules",
-    "cypress"
+    "cypress",
+    "_test_"
 ]  
 }
