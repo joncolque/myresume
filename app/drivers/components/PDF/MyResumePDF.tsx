@@ -1,7 +1,6 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet, Font } from '@react-pdf/renderer';
 import { Resume } from '../../../../core/entities/Resume';
-import { Tags } from '../tags/Tags';
 
 interface Props {
   resume: Resume

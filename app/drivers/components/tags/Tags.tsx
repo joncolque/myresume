@@ -3,16 +3,17 @@ import styled from "styled-components"
 interface Props {
     items: string[]
     backgroundColor?: string
+    large?: boolean 
 }
 
-export const Tags = ({ items, backgroundColor }: Props) =>
+export const Tags = ({ items, backgroundColor, large=false }: Props) =>
     <TagsContainer>
-        {items.map(it => <Tag key={it} item={it} backgroundColor={backgroundColor} />)}
+        {items.map(it => <Tag key={it} item={it} backgroundColor={backgroundColor} large={large}/>)}
     </TagsContainer>
 
 
-const Tag = ({ item, backgroundColor }: { item: string, backgroundColor?: string }) => {
-    return <TagContainer style={{ backgroundColor: backgroundColor?? 'skyblue' }}>
+const Tag = ({ item, backgroundColor, large }: { item: string, backgroundColor?: string, large?:boolean }) => {
+    return <TagContainer style={{ backgroundColor: backgroundColor?? 'skyblue', padding: large?'10px':'4px', fontSize:large? '16px':'10px'}}>
         {item}
     </TagContainer >
 }

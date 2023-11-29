@@ -3,7 +3,7 @@ import { Resume } from "../core/entities/Resume";
 export const resume: Resume = {
     name: 'Jon Wilson Colque Limachi',
     profession: 'Software Engineer',
-    aboutme: 'I am passionate about the transmission of human knowledge, especially when it is technology. I am methodical, I focus on delivering value, I like teamwork. Systems Engineer.',
+    aboutme: 'As an experienced Software Engineer with over 5 years of expertise in developing software solutions, I possess advanced skills in frontend technologies. Currently, I am expanding my knowledge in leadership development and focusing on designing systems with clean architecture and writing clean code.',
     companies: [
         {
             name: 'Veritran - Business solutions with Low-Code core',
