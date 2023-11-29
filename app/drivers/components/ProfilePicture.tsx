@@ -13,7 +13,7 @@ export const ProfilePicture = ({ src }: Props) => {
         <>
             {showPicture && <img
                 className={styles.img_profile}
-                src={src}
+                src={'/profilePicture.jpg'}
                 alt="software engineer"
                 width="500"
                 height="600"
