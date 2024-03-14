@@ -10,6 +10,7 @@ import { HeadPage } from '../app/drivers/components/headPage/HeadPage'
 import { Resume } from '../core/entities/Resume'
 import { Tags } from '../app/drivers/components/tags/Tags'
 import styled from 'styled-components'
+import { AboutMePhone } from '../app/drivers/components/headPage/AboutMe'
 
 const lastUpdated = 'Last updated: 28 NOV 2023.';
 const footerText = `This page is a proof of concept built with React on Next.js using: Clean architecture, semantic HTML and CSS, custom domain, AWS Amplify, AWS Route 53, and will be modified to test several concepts.`;
@@ -26,19 +27,24 @@ export default function Home() {
 }
 
 export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; distinctTechnologies: string[] }) => (
-  <div className={styles.container}>
+  <Container>
     <HeadPage />
     {resume && (
-      <main className={styles.main}>
-        <ProfilePicture src={srcProfilePicture} />
+      <MainContainer>
+        <ProfileContainer>
+          <ProfilePicture src={srcProfilePicture} />
+          <ProfileUser resume={resume} />
+        </ProfileContainer>
+        <AboutMePhone data-test={'p-aboutme'}>
+          {resume.aboutme}
+        </AboutMePhone>
         <SocialMedia resume={resume} />
-        <ProfileUser resume={resume} />
-      </main>
+      </MainContainer>
     )}
     {distinctTechnologies && (
       <SkillsSummaryContainer>
         <div title='header-technologies'>
-          <Tags large items={distinctTechnologies} backgroundColor={'#daffed'}/>
+          <Tags large items={distinctTechnologies} backgroundColor={'#daffed'} />
         </div>
       </SkillsSummaryContainer>
     )}
@@ -54,10 +60,34 @@ export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; d
         <em>{lastUpdated}</em>
       </p>
     </footer>
-  </div>
+  </Container>
 );
+
+const Container = styled.div`
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+`
 
 
 const SkillsSummaryContainer = styled.div`
   margin: 20px
+`
+
+const ProfileContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const PictureUserContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `

@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const Experience = ({ resume }: Props) => <>
-    {resume.companies.map(c => <p key={c.name}>
+    {resume.companies.map(c => <div key={c.name}>
         <strong>{c.name}</strong>
         {c.jobs.map(j => <div key={j.name}>
             <div>{j.years} - {j.name}</div>
@@ -17,5 +17,5 @@ export const Experience = ({ resume }: Props) => <>
             {j.methodologies && <div style={{marginTop: '4px'}}><Tags items={j.methodologies} backgroundColor={ experienceTagColor}/></div>}
             {j.languages && <div style={{marginTop: '4px'}}><Tags items={j.languages} backgroundColor={ experienceTagColor}/></div>}
         </div>)}
-    </p>)}
+    </div>)}
 </>

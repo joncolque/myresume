@@ -1,18 +1,25 @@
+import { styled } from "styled-components";
 import { Resume } from "../../../core/entities/Resume";
-import { AboutMe, Subtitle, Title } from "./ProfileUser.style";
+import { AboutMeWeb } from "./headPage/AboutMe";
+import { Subtitle, Title } from "./ProfileUser.style";
 
 interface Props {
   resume: Resume
 }
 
-export const ProfileUser = ({ resume }: Props) => <>
+export const ProfileUser = ({ resume }: Props) => <ProfileUserContainer>
   <Title data-test={'title-name'}>
     {resume.name}
   </Title>
   <Subtitle data-test={'subtitle-profession'}>
     {resume.profession}
   </Subtitle>
-  <AboutMe data-test={'p-aboutme'}>
+  <AboutMeWeb data-test={'p-aboutme'}>
     {resume.aboutme}
-  </AboutMe>
-</>
+  </AboutMeWeb>
+</ProfileUserContainer>
+
+const ProfileUserContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
