@@ -12,9 +12,11 @@ export const MyResumePDF = ({ resume }: Props) => (
       <View style={styles.section}>
 
         <View style={styles.header}>
-          <Text style={styles.titleBold}>{resume.name}</Text>
-          <Text style={styles.title}>joncolque@gmail.com</Text>
-          <Text style={styles.title}>{resume.profession}</Text>
+          <Text style={styles.name}>{resume.name}</Text>
+          <Text style={styles.profession}>{resume.profession}</Text>
+          <Text style={styles.title}>{resume.email}</Text>
+          <Text style={styles.title}>{resume.professionalMedia}</Text>
+          <Text style={styles.title}>https://medium.com/@joncolque</Text>
         </View>
 
         <View style={styles.aboutMe}>
@@ -25,14 +27,19 @@ export const MyResumePDF = ({ resume }: Props) => (
           {resume.companies.map(c => <View key={c.name} style={styles.companieContainer}>
             <Text style={styles.titleCompanie}>{c.name}</Text>
             {c.jobs.map(j => <div key={j.name}>
-              <Text style={styles.description}>{j.years} - {j.name}</Text>
+              <Text style={styles.yearsPosition}>{j.name} - {j.years}</Text>
               <Text style={styles.description}>{j.desc}</Text>
-              {j.technologies && <TagsPDF items={j.technologies} />}
-              {j.methodologies && <TagsPDF items={j.methodologies} />}
-              {j.languages && <TagsPDF items={j.languages} />}
+              {j.technologies && <TagsPDF items={j.technologies.concat(j.languages as string[]).concat(j.methodologies as string[])} />}
+          {/*     {j.methodologies && <TagsPDF items={j.methodologies} />}
+              {j.languages && <TagsPDF items={j.languages} />} */}
             </div>)}
           </View >)}
         </div>
+
+{/*         <View style={styles.bottomPage}>
+          <Text style={styles.title}>{resume.professionalMedia}</Text>
+          <Text style={styles.title}>{resume.professionalMedia}</Text>
+        </View> */}
 
       </View>
     </Page>
@@ -41,7 +48,7 @@ export const MyResumePDF = ({ resume }: Props) => (
 
 const TagsPDF = ({ items }: { items: string[] }) =>
   <Text style={styles.description}>
-    {items?.map((item, idx) => `${item}${((idx + 1) === items?.length) ? '.' : ', '}`)}
+    <Text style={styles.technologies}>Technologies:</Text> {items?.map((item, idx) => `${item}${((idx + 1) === items?.length) ? '.' : ', '}`)}
   </Text>
 
 Font.register({
@@ -60,14 +67,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'white'
   },
   header: {
-    marginBottom: '30px'
+    marginBottom: '8px'
+  },
+  bottomPage: {
+    marginTop: '8px'
   },
   aboutMe: {
-    marginBottom: '30px'
+    marginBottom: '8px'
   },
-  titleBold: {
+  name: {
     fontFamily: 'MontserratB',
-    fontSize: 12,
+    fontSize: 14,
+    alignSelf: 'center'
+  },
+  profession:{
+    fontFamily: 'MontserratB',
+    fontSize: 14,
     alignSelf: 'center'
   },
   title: {
@@ -81,14 +96,25 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   companieContainer: {
-    marginBottom: '10px'
+    marginBottom: '4px'
   },
   titleCompanie: {
     fontFamily: 'MontserratB',
     fontSize: 12,
+    marginBottom: '4px'
+  },
+  yearsPosition: {
+    fontFamily: 'MontserratB',
+    fontSize: 10,
   },
   description: {
     fontFamily: 'Montserrat',
     fontSize: 10,
+    marginBottom: '4px'
+  },
+  technologies: {
+    fontFamily: 'MontserratB',
+    fontSize: 10,
   }
+
 });

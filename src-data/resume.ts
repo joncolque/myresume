@@ -2,84 +2,103 @@ import { Resume } from "../core/entities/Resume";
 
 export const resume: Resume = {
     name: 'Jon Wilson Colque Limachi',
-    profession: 'Software Engineer',
-    aboutme: 'As an experienced Software Engineer with over 5 years of expertise in developing software solutions, I possess advanced skills in frontend technologies. Currently, I am expanding my knowledge in leadership development and focusing on designing systems with clean architecture and writing clean code.',
+    profession: 'Software Engineer - Argentina',
+    email:'joncolque@gmail.com',
+    professionalMedia: 'https://www.linkedin.com/in/jon-wilson-colque-limachi/',
+    aboutme: 'I’m a passionate software engineer with over 6 years of experience in full-stack development, specializing in front-end technologies like React and React Native. During my career, I’ve worked in fintech, SMEs, and startup environments, always striving to deliver clean, efficient, and maintainable code. I am open to fully remote roles.',
     companies: [
         {
-            name: 'Veritran - Business solutions with Low-Code core',
+            name: 'Veritran - Business solutions with Low-Code core - Argentina',
             jobs: [
                 {
-                    name: 'Software Engineer',
-                    years: '2023',
-                    technologies: ['react'],
-                    methodologies: ['clean architecture','clean code', 'tdd', 'pair programming'],
-                    languages: ['typescript','javascript', 'kotlin','java'],
+                    years: `2023/2024`,
+                    name: `Software Engineer`,
+                    desc: `Full-stack development for an enterprise low-code platform tailored for banks. Focused on enhancing the experience of low-code developers by developing services that improve their interaction with the platform.
+                    - Integrated Google Analytics into a B2B implementation to track service usage across banks.
+                    - Led efforts from UX and QA teams to update frontend components during a core migration.
+                    - Enhanced the exploration of components in the apps that low-code developers are building.`,
+                    technologies: ['React'],
+                    methodologies: ['Clean architecture','Clean code', 'TDD'],
+                    languages: ['Typescript','Javascript', 'Google Analytics', 'Kotlin','Java'],
                 }
             ]
         },
         {
-            name: 'Fiera Studio - Venture Studio',
+            name: 'Fiera Studio - Venture Studio - Argentina',
             jobs: [
                 {
-                    name: 'Lead Frontend Engineer',
-                    years: '2022',
-                    desc: 'Responsible for all stages of the apps. Code reviewer. Use clean architecture. Develop core integrations. Technical interviews.',
+                    name: `Lead Frontend Engineer`,
+                    years: `2022`,
+                    desc: `Frontend lead and development for MVP websites and apps for large companies and other startups.
+                    - Led a team of 3 developers in building scalable React and React Native applications.
+                    - Led all stages of the web and mobile app development.
+                    - Explored new technologies and tools with the CTO and Lead Backend Engineer.`,
                 },
                 {
-                    name: 'Frontend Software Engineer',
-                    years: '2020 - 2022',
-                    technologies: ['react', 'react native', 'nextjs', 'nodejs', 'mongodb', 'firebase', 'android studio', 'xcode'],
-                    methodologies: ['clean architecture','ci'],
-                    languages: ['typescript','javascript']
+                    name: `Frontend Software Engineer`,
+                    years: `2020/2022`,
+                    technologies: ['React', 'React Native', 'Nextjs', 'Nodejs', 'Firebase', 'Android Studio', 'Xcode'],
+                    methodologies: ['Clean Architecture'],
+                    languages: ['Typescript','Javascript']
                 }
             ]
         },
         {
-            name: 'C&S - Software Factory',
+            name: 'C&S - Software Factory - Argentina',
             jobs: [
                 {
-                    name: 'Mobile Developer',
+                    name: `Mobile Developer`,
                     years: '2020',
-                    desc: 'Responsibilities: Development of the new Mobile department. Train new collaborators. Documentation. Given workshops: React & React Native. Proofs of concept for mobile features on backend side.',
-                    technologies: ['react native', 'android studio', 'xcode', 'node', 'go'],
-                    methodologies: ['scrum'],
-                    languages: ['javascript','kotlin','swift']
+                    desc: `React Native development for the new mobile department and maintenance of older Android and iOS apps.
+                    - Trained new collaborators.
+                    - Gave workshops on React & React Native.
+                    - Developed POCs on backend side for mobile features.`,
+                    technologies: ['React native', 'Android Studio', 'Xcode', 'Node', 'Go'],
+                    methodologies: ['Scrum'],
+                    languages: ['Javascript','Kotlin','Swift']
                 },
                 {
-                    name: 'Fullstack developer',
-                    years: '2017 - 2020',
-                    desc: `Development of apps for internal use by the company and for clients. Research of new technologies and their potential for the company. Exhibition of capitalized technologies to the development areas and technical support.
-            Given workshops: Angular, Go.
-            Projects:
-            - Microservices to connect devices regardless of protocol (IOT)
-            - Microservice to follow trucks with GPS
-            - CLI Framework javascript fullstack to generate applications end to end.
-            - Desktop application for public tenders of "Compr.ar" systems from National Goverment.
-            - Wiki repository to document the technological solutions for the company.`,
-                    technologies: ['angular', 'react', 'node', 'express', 'go', 'firebase','mongodb', 'docker','electron'],
-                    methodologies: ['scrum'],
-                    languages: ['javascript','go']
+                    name: `Full Stack developer`,
+                    years: `2017/2020`,
+                    desc: `Full-stack development of apps for internal use by the company and for other companies.
+                    - Researched new technologies and their potential for the company.
+                    - Taught capitalized technologies to the development areas as a mentor.
+                    - Gave workshops on Angular and Go`,
+                    technologies: ['Angular', 'React', 'Node', 'Express', 'Go', 'Firebase','Mongodb', 'Docker','Electron'],
+                    methodologies: ['Scrum'],
+                    languages: ['Javascript','Go']
                 }
             ]
         },
         {
-            name: 'Blended - School Communication Platform',
+            name: 'Blended - School Communication Platform - Argentina',
             jobs: [
                 {
-                    name: 'Android Developer Trainee',
-                    years: '2016 - 2017',
-                    technologies: ['android studio'],
-                    languages: ['java']
+                    name: `Android Developer Trainee`,
+                    years: '2016/2017',
+                    desc: `Maintenance of the app used by the school community to track payments and official school communications.
+                    - Developed UI components for chat interactions.
+                    - Fixed minor bugs.
+                    - Tested the app.`,
+                    technologies: ['Android Studio'],
+                    languages: ['Java'],
+                    methodologies: []
                 },
             ]
         },
         {
-            name: 'Banco Hipotecario - Bank Industry',
+            name: 'Banco Hipotecario - Bank Industry - Argentina',
             jobs: [
                 {
-                    name: 'Analyst Programmer',
-                    technologies: ['SQL Server'],
-                    years: '2015 - 2016',
+                    name: `Analyst Programmer`,
+                    years: '2015/2016',
+                    desc: `Obtaining customer information to offer them products such as loans, credit cards, and others.
+                    - Created database queries to obtain customer information.
+                    - Campaign deployment through email and SMS.
+                    - Created database queries to automate reports.`,
+                    technologies: ['SQL Server','Excel'],
+                    languages: [],
+                    methodologies: [],
                 },
             ]
         }

@@ -1,6 +1,8 @@
 export interface Resume {
     name: string
     profession: string
+    email: string
+    professionalMedia: string
     aboutme: string
     companies: Company[]
 }
