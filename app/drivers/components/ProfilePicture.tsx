@@ -23,18 +23,7 @@ export const ProfilePicture = ({ src }: Props) => {
 
 const ImageContainer = styled.img`
     border-radius: 10%;
-    width: 200px;
-    height: 200px;
-    margin-right: 20px;
+    width: 100px;
+    height: 100px;
     border:4px solid var(--primary);
-
-    @media only screen and (max-width: 768px) {
-        width: 100px;
-        height: 100px;
-  }
-
-    @media only screen and (min-width: 769px) {
-        width: 200px;
-        height: 200px;
-    }
 `

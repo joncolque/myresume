@@ -10,7 +10,6 @@ import { HeadPage } from '../app/drivers/components/headPage/HeadPage'
 import { Resume } from '../core/entities/Resume'
 import { Tags } from '../app/drivers/components/tags/Tags'
 import styled from 'styled-components'
-import { AboutMePhone } from '../app/drivers/components/headPage/AboutMe'
 
 const lastUpdated = 'Last updated: 28 NOV 2023.';
 const footerText = `This page is a proof of concept built with React on Next.js using: Clean architecture, semantic HTML and CSS, custom domain, AWS Amplify, AWS Route 53, and will be modified to test several concepts.`;
@@ -31,13 +30,15 @@ export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; d
     <HeadPage />
     {resume && (
       <MainContainer>
-        <ProfileContainer>
-          <ProfilePicture src={srcProfilePicture} />
-          <ProfileUser resume={resume} />
-        </ProfileContainer>
-        <AboutMePhone data-test={'p-aboutme'}>
-          {resume.aboutme}
-        </AboutMePhone>
+        <UserContainer>
+          <ProfileContainer>
+            <ProfilePicture src={srcProfilePicture} />
+            <ProfileUser resume={resume} />
+          </ProfileContainer>
+          <AboutMe data-test={'p-aboutme'}>
+            {resume.aboutme}
+          </AboutMe>
+        </UserContainer>
         <SocialMedia resume={resume} />
       </MainContainer>
     )}
@@ -81,13 +82,29 @@ const SkillsSummaryContainer = styled.div`
   margin: 20px
 `
 
+const UserContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  max-width: 1200px;
+  align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
 const ProfileContainer = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
-const PictureUserContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+const AboutMe = styled.div`
+  font-size: 14px;
+  color: gray;
+  text-align: justify;
 `
