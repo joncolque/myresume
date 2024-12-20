@@ -2,17 +2,30 @@ export const socialMedia = [
     {
         name: 'linkedin',
         url: 'https://www.linkedin.com/in/jon-wilson-colque-limachi-0439abb2',
-        icon: 'linkedin.svg'
+        icon: 'linkedin.svg',
+        actionIcon: 'new-tab.png',
     },
     {
         name: 'medium',
         url: 'https://medium.com/@joncolque',
         icon: 'medium.svg',
+        actionIcon: 'new-tab.png',
     },
     {
         name: 'github',
         url: 'https://github.com/joncolque/myresume',
-        icon: 'github.svg'
+        icon: 'github.svg',
+        actionIcon: 'new-tab.png',
+    },
+    {
+        name: 'email',
+        icon: 'gmail.svg',
+        actionIcon: 'copy.png'
+    },
+    {
+        name: 'cv',
+        icon: 'pdf.svg',
+        actionIcon: 'download.png'
     },
 ]
 
