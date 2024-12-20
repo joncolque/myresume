@@ -13,9 +13,6 @@ export const ProfilePicture = ({ src }: Props) => {
             {showPicture && <ImageContainer
                 src={'/profilePicture.jpg'}
                 alt="software engineer"
-                width="500"
-                height="600"
-                onError={() => setShowPicture(false)}
             />}
         </>
     )
@@ -23,7 +20,7 @@ export const ProfilePicture = ({ src }: Props) => {
 
 const ImageContainer = styled.img`
     border-radius: 10%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border:4px solid var(--primary);
 `

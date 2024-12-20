@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { hydrate } from 'react-dom';
 import { PDFDownloadLink } from '@react-pdf/renderer';
+import { SocialMediaItemContainer, SocialMediaItemBackgroundIcon, SocialMediaItemOverlayIcon } from '../SocialMedia'
 
 export default class DownloadResumePDF extends Component {
   state = {
@@ -41,7 +42,7 @@ export default class DownloadResumePDF extends Component {
       hydrate(link, elem);
     }, 500);
   };
-  
+
 
   buildPDF = () => {
     const { loading } = this.state;
@@ -60,10 +61,19 @@ export default class DownloadResumePDF extends Component {
 
   render() {
     const { loading } = this.state;
+    const { iconWidth } = this.props;
+
     return loading ? (
       <div id="pdfButton">Loading...</div>
     ) : (
-      <img onClick={this.buildPDF}  src={'pdf.svg'} width={'40px'} style={{ cursor: 'pointer' }} />
+
+      <SocialMediaItemContainer>
+        <SocialMediaItemBackgroundIcon src={'pdf.svg'} width={iconWidth} style={{ cursor: 'pointer' }} onClick={this.buildPDF} />
+        <SocialMediaItemOverlayIcon
+          src={'download.png'}
+          width={12}
+        />
+      </SocialMediaItemContainer>
     );
   }
 }

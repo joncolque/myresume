@@ -23,13 +23,13 @@ const ProfileUserContainer = styled.div`
   }
 `
 
-const Title = styled.div`
+const Title = styled.strong`
   font-size: 18px;
-  font-weight: 600;
   color: var(--primary);
   white-space: nowrap;
 `
 
-const Subtitle = styled.div`
-  font-size: 14px;
+const Subtitle = styled.strong`
+  color: gray;
+  font-size: 18px;
 `

@@ -31,24 +31,26 @@ export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; d
     {resume && (
       <MainContainer>
         <UserContainer>
-          <ProfileContainer>
-            <ProfilePicture src={srcProfilePicture} />
+          <LeftContainer>
             <ProfileUser resume={resume} />
-          </ProfileContainer>
-          <AboutMe data-test={'p-aboutme'}>
-            {resume.aboutme}
-          </AboutMe>
+            <AboutMe data-test={'p-aboutme'}>
+              {resume.aboutme}
+            </AboutMe>
+            <SocialMedia resume={resume} />
+          </LeftContainer>
+          <RightContainer>
+            <ProfilePicture src={srcProfilePicture} />
+          </RightContainer>
         </UserContainer>
-        <SocialMedia resume={resume} />
       </MainContainer>
     )}
-    {distinctTechnologies && (
+    {/* {distinctTechnologies && (
       <SkillsSummaryContainer>
         <div title='header-technologies'>
-          <Tags large items={distinctTechnologies} backgroundColor={'#daffed'} />
+          <Tags large items={distinctTechnologies} backgroundColor={'skyblue'} />
         </div>
       </SkillsSummaryContainer>
-    )}
+    )} */}
     {resume && (
       <section role='experience'>
         <Experience resume={resume} />
@@ -65,11 +67,11 @@ export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; d
 );
 
 const Container = styled.div`
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  justify-self: center;
 `
 
 const MainContainer = styled.main`
@@ -79,13 +81,14 @@ const MainContainer = styled.main`
 
 
 const SkillsSummaryContainer = styled.div`
-  margin: 20px
+  margin-top: 8px;
+  margin-bottom: 8px;
 `
 
 const UserContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 8px;
   max-width: 1200px;
   align-items: center;
   @media (max-width: 800px) {
@@ -93,18 +96,26 @@ const UserContainer = styled.div`
   }
 `
 
-const ProfileContainer = styled.div`
+const LeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
+const RightContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 12px;
   align-items: center;
   @media (max-width: 800px) {
-    flex-direction: column;
+    order: -1;
   }
 `
 
 const AboutMe = styled.div`
   font-size: 14px;
   color: gray;
-  text-align: justify;
+  margin-block: 8px;
 `
