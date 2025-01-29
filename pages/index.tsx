@@ -8,12 +8,9 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { srcProfilePicture } from '../src-data/socialMedia'
 import { HeadPage } from '../app/drivers/components/headPage/HeadPage'
 import { Resume } from '../core/entities/Resume'
-import { Tags } from '../app/drivers/components/tags/Tags'
 import styled from 'styled-components'
 
-const lastUpdated = 'Last updated: 28 NOV 2023.';
-const footerText = `This page is a proof of concept built with React on Next.js using: Clean architecture, semantic HTML and CSS, custom domain, AWS Amplify, AWS Route 53, and will be modified to test several concepts.`;
-const comingSoon = 'Coming soon: selector technologies.';
+const footerText = `This page is a proof of concept built with React on Next.js and will be modified to test several concepts.`;
 
 export default function Home() {
   const { resume, distinctTechnologies } = useGetResume();
@@ -58,10 +55,6 @@ export const HomeStatic = ({ resume, distinctTechnologies }: { resume: Resume; d
     )}
     <footer className={styles.footer}>
       <span>{footerText}</span>
-      <span>{comingSoon}</span>
-      <p>
-        <em>{lastUpdated}</em>
-      </p>
     </footer>
   </Container>
 );
