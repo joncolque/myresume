@@ -13,7 +13,7 @@ export const socialMedia = [
     },
     {
         name: 'github',
-        url: 'https://github.com/joncolque/myresume',
+        url: 'https://github.com/joncolque',
         icon: 'github.svg',
         actionIcon: 'new-tab.png',
     },

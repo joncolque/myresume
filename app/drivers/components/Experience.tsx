@@ -2,14 +2,16 @@ import styled from "styled-components"
 import { Resume } from "../../../core/entities/Resume"
 import { Tags } from "./tags/Tags"
 
-const experienceTagColor = '#daffed'
-
 interface Props {
     resume: Resume
 }
 
 export const Experience = ({ resume }: Props) => <>
-    {resume.companies.map(c => <CompanyItem companiTitle={c.name} jobs={c.jobs} />)}
+    {resume.companies.map(c => <CompanyItem
+        key={c.name}
+        companiTitle={c.name}
+        jobs={c.jobs}
+    />)}
 </>
 
 
@@ -22,7 +24,13 @@ const CompanyItem = ({ companiTitle, jobs }: CompanyItemProps) => {
     return (
         <CompanyContainer key={companiTitle}>
             <strong>{companiTitle}</strong>
-            {jobs.map(j => <JobItem name={j.name} years={j.years} desc={j.desc} technologies={j.technologies} />)}
+            {jobs.map(j => <JobItem
+                key={j.name}
+                name={j.name}
+                years={j.years}
+                desc={j.desc}
+                technologies={j.technologies}
+            />)}
         </CompanyContainer>
     )
 }

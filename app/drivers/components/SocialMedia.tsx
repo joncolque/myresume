@@ -6,8 +6,9 @@ import { Resume } from '../../../core/entities/Resume'
 import DownloadResumePDF from './PDF/DownloadResumePDF'
 import { MyResumePDF } from './PDF/MyResumePDF'
 import { IconsContainer } from './IconsContainer'
+import useClipboard from '../useClipboard'
 
-const defaultTooltipText = 'Click to copy: ' + email
+const defaultTooltipText = email
 const copiedTooltipText = 'Copied!'
 
 interface Props {
@@ -16,10 +17,12 @@ interface Props {
 
 export const SocialMedia = ({ resume }: Props) => {
     const [tooltipText, setTooltipText] = useState<string>(defaultTooltipText)
+    const { copyToClipboard } = useClipboard()
 
     const onClickEmailIcon = () => {
-        navigator.clipboard.writeText(email)
-        setTooltipText(copiedTooltipText)
+        copyToClipboard(email, () => {
+            setTooltipText(copiedTooltipText)
+        })
         setTimeout(() => {
             setTooltipText(defaultTooltipText)
         }, 3000)
@@ -31,9 +34,7 @@ export const SocialMedia = ({ resume }: Props) => {
                 <IconsContainer iconSrc={sm.icon} actionIconSrc={sm.actionIcon} />
             </a>}
             {sm.name === 'email' && <Tooltip text={tooltipText} >
-                <div onClick={onClickEmailIcon}>
-                    <IconsContainer iconSrc={sm.icon} actionIconSrc={sm.actionIcon} />
-                </div>
+                <IconsContainer iconSrc={sm.icon} actionIconSrc={sm.actionIcon} onClick={onClickEmailIcon} />
             </Tooltip>}
             {sm.name === 'cv' && resume && <DownloadResumePDF iconSrc={sm.icon} actionIconSrc={sm.actionIcon}>
                 <MyResumePDF resume={resume} />

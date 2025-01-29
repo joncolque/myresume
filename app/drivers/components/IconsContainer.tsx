@@ -3,18 +3,17 @@ import styled from 'styled-components'
 interface IconsContainerProps {
     iconSrc: string,
     actionIconSrc: string,
+    onClick?: () => void
 }
 
-export const IconsContainer = ({ iconSrc, actionIconSrc }: IconsContainerProps) => {
+export const IconsContainer = ({ iconSrc, actionIconSrc, onClick }: IconsContainerProps) => {
     return (
-        <SocialMediaItemIcons>
+        <SocialMediaItemIcons onClick={onClick}>
             <SocialMediaItemBackgroundIcon src={iconSrc} />
             <SocialMediaItemOverlayIcon src={actionIconSrc} />
         </SocialMediaItemIcons>
     )
 }
-
-
 
 export const SocialMediaItemIcons = styled.div`
     position: relative;
