@@ -11,7 +11,7 @@ export const ProfilePicture = ({ src }: Props) => {
     return (
         <>
             {showPicture && <ImageContainer
-                src={'/profilePicture.jpg'}
+                src={'./profilePicture.jpg'}
                 alt="software engineer"
             />}
         </>
